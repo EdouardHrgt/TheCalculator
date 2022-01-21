@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/themes.css" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <title>The Calculator - FrontEndMentor Project by Edouard Herrengt -</title>
+  </head>
+  <body>
+    <section class="main-wrapper flex theme-1">
+      <div class="calculator">
+        <!-- Logo + themes -->
+        <header class="flex">
+          <div class="logo">
+            <h1>calc</h1>
+          </div>
+          <div class="themes flex">
+            <h2>THEME</h2>
+            <div class="theme-switcher-wrapper flex">
+              <div class="theme-numbers flex">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+              </div>
+              <div class="theme-switcher flex">
+                <div class="ball"></div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <!-- Results -->
+        <section class="results flex">
+          <div class="displayer">
+            <p></p>
+          </div>
+        </section>
+        <!-- All btns  -->
+        <section class="keypad">
+          <div class="buttons-wrapper">
+            <!-- Operators + numbers -->
+            <div class="small-btns flex">
+              <p class="btn-content flex">7</p>
+            </div>
+            <div class="small-btns flex">
+              <p class="btn-content flex">8</p>
+            </div>
+            <div class="small-btns flex">
+              <p class="btn-content flex">9</p>
+            </div>
+            <div class="delete-btn flex">
+              <p class="btn-content-del flex">DEL</p>
+            </div>
+            <div class="small-btns flex">
+              <p class="btn-content flex">4</p>
+            </div>
+            <div class="small-btns flex">
+              <p class="btn-content flex">5</p>
+            </div>
+            <div class="small-btns flex">
+              <p class="btn-content flex">6</p>
+            </div>
+            <div class="small-btns flex">
+              <p class="btn-content flex">+</p>
+            </div>
+            <div class="small-btns flex">
+              <p class="btn-content flex">1</p>
+            </div>
+            <div class="small-btns flex">
+              <p class="btn-content flex">2</p>
+            </div>
+            <div class="small-btns flex">
+              <p class="btn-content flex">3</p>
+            </div>
+            <div class="small-btns flex">
+              <p class="btn-content flex">-</p>
+            </div>
+            <div class="small-btns flex">
+              <p class="btn-content flex">.</p>
+            </div>
+            <div class="small-btns flex">
+              <p class="btn-content flex">0</p>
+            </div>
+            <div class="small-btns flex">
+              <p class="btn-content flex">/</p>
+            </div>
+            <div class="small-btns flex" id="multiply">
+              <p class="btn-content flex">*</p>
+            </div>
+            <!-- Reset + equal -->
+            <div class="large-btns flex" id="reset">
+              <p class="large-btn-content flex">RESET</p>
+            </div>
+            <div class="large-btns flex" id="total">
+              <p class="large-btn-content flex">=</p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="copyrights">
+        <p>By Edouard Herrengt - FrontEndMentors &copy</p>
+      </div>
+    </section>
+
+    <script src="./app/app.js"></script>
+    <script src="./app/themes.js"></script>
+  </body>
+</html>

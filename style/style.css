@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;500;700&display=swap');
+:root {
+  --font: 'Spartan', sans-serif;
+  --key-size: 2rem;
+  --key-size-mobile: 1.8rem;
+  --weight: 700;
+  --radius: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: background-color 0.4s, color 0.8s;
+}
+
+.flex {
+  display: flex;
+}
+
+.main-wrapper {
+  background-color: var(--main-bg);
+  height: 100vh;
+  width: 100%;
+  font-family: var(--font);
+  justify-content: center;
+  position: relative;
+}
+
+.calculator {
+  width: 35em;
+  height: 40em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ### Logo + Themes ### */
+header {
+  width: 100%;
+  height: 2.5em;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 1.5em;
+}
+
+.logo {
+  font-size: 1.3rem;
+  color: var(--logo);
+}
+
+.themes {
+  align-items: flex-end;
+}
+
+h2 {
+  font-size: 0.8rem;
+  color: var(--logo);
+  margin-right: 1em;
+}
+
+.theme-switcher-wrapper {
+  width: 4.5em;
+  height: 2.5em;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+}
+
+.theme-numbers {
+  width: 75%;
+  border-radius: 20px;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.theme-numbers span {
+  color: var(--logo);
+  font-weight: var(--weight);
+  font-size: 0.7rem;
+}
+
+.theme-switcher {
+  width: 100%;
+  height: 1.6em;
+  background-color: var(--toggle-bg);
+  border-radius: 20px;
+  position: relative;
+}
+
+.ball {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--key2-bg);
+  position: absolute;
+  z-index: 5;
+  left: 7%;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+/* ### Results ### */
+.results {
+  background-color: var(--screen-bg);
+  border-radius: var(--radius);
+  width: 100%;
+  height: 8em;
+  align-items: center;
+  margin-bottom: 1.5em;
+}
+
+.displayer {
+  color: var(--logo);
+  font-size: var(--key-size);
+  font-weight: var(--weight);
+  margin: 0 0.7em;
+  width: 100%;
+  text-align: right;
+}
+
+.keypad {
+  width: 100%;
+  height: 30em;
+  display: flex;
+  align-items: center;
+  background-color: var(--toggle-bg);
+  border-radius: var(--radius);
+  justify-content: center;
+}
+
+/*Key Pads*/
+.buttons-wrapper {
+  width: 95%;
+  height: 90%;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+.small-btns,
+.delete-btn {
+  background-color: var(--key3-bg);
+  border-radius: 5px;
+  width: 6.8em;
+  height: 63%;
+  overflow: hidden;
+  box-shadow: 0 4px 0 var(--key3-sh);
+  cursor: pointer;
+  position: relative;
+}
+
+.btn-content,
+.btn-content-del {
+  font-weight: var(--weight);
+  color: var(--txt-bg);
+  font-size: var(--key-size);
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 5%;
+}
+
+.large-btns {
+  width: 92%;
+  height: 95%;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+}
+
+#reset {
+  grid-area: 5/1/5/3;
+  background-color: var(--key1-bg);
+  box-shadow: 0 4px 0 var(--key1-sh);
+  color: var(--reset);
+}
+
+#total {
+  grid-area: 5/3/5/5;
+  background-color: var(--key2-bg);
+  box-shadow: 0 4px 0 var(--key2-sh);
+  color: var(--total);
+}
+
+.large-btn-content {
+  font-weight: var(--weight);
+  font-size: 1.8rem;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 5%;
+  letter-spacing: 2px;
+}
+
+.copyrights {
+  color: var(--logo);
+  opacity: 0.5;
+  font-size: 0.8rem;
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+/* ################################ Mobile design ################################ */
+
+@media screen and (max-width: 768px) {
+  .calculator {
+    width: 90%;
+    height: 95vh;
+    margin-top: 0;
+    margin: 2.5% 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .displayer {
+    font-size: var(--key-size-mobile);
+  }
+  .keypad {
+    height: auto;
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    top: 13.5em;
+  }
+  .small-btns,
+  .delete-btn {
+    width: 80%;
+  }
+  .large-btns {
+    height: 85%;
+  }
+  .btn-content-del {
+    font-size: var(--key-size-mobile);
+  }
+  .copyrights {
+    bottom: 0.7rem;
+  }
+}
