@@ -29,11 +29,7 @@
 
 .calculator {
   width: 35em;
-  height: 40em;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: 100px auto;
 }
 
 /* ### Logo + Themes ### */
@@ -222,10 +218,9 @@ h2 {
 
 @media screen and (max-width: 768px) {
   .calculator {
-    width: 90%;
+    width: 30em;
     height: 95vh;
-    margin-top: 0;
-    margin: 2.5% 0;
+    margin: 0 auto;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -251,7 +246,10 @@ h2 {
   .btn-content-del {
     font-size: var(--key-size-mobile);
   }
-  .copyrights {
-    bottom: 0.7rem;
+}
+
+@media screen and (max-width: 615px) {
+  .calculator {
+    width: 95%;
   }
 }
