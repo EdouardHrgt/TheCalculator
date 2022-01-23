@@ -1,5 +1,6 @@
 const screen = document.querySelector('.displayer p');
 const btns = document.querySelectorAll('.btn-content');
+const btnsWrapper = document.querySelectorAll('.small-btns');
 
 const deleteBtn = document.querySelector('.delete-btn');
 const reset = document.querySelector('#reset');
@@ -8,7 +9,6 @@ const total = document.querySelector('#total');
 // Print btn value on screen
 btns.forEach((btn) => {
   btn.addEventListener('click', () => {
-    console.log(btn.textContent);
     screen.textContent += btn.textContent;
   });
 });

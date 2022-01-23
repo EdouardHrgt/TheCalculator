@@ -119,6 +119,7 @@ h2 {
   margin: 0 0.7em;
   width: 100%;
   text-align: right;
+  overflow: hidden;
 }
 
 .keypad {
@@ -152,6 +153,11 @@ h2 {
   box-shadow: 0 4px 0 var(--key3-sh);
   cursor: pointer;
   position: relative;
+}
+
+.small-btns:hover,
+.delete-btn:hover {
+  filter: brightness(90%);
 }
 
 .btn-content,
